@@ -23,4 +23,23 @@ func main() {
 	ret = max(a, b)
 
 	fmt.Printf("Max value is : %d\n", ret)
+
+	// Oweipadei Joshua Bayefa: Function
+	numbers := []float64{1.0, 2.0, 3.0, 4.0, 5.0}
+	avg := CalculateAverage(numbers)
+	fmt.Printf("Average: %.2f\n", avg)
+}
+
+func CalculateAverage(numbers []float64) float64 {
+	// Avoid division by zero for empty slices
+	if len(numbers) == 0 {
+		return 0.0
+	}
+
+	var sum float64
+	for _, num := range numbers {
+		sum += num
+	}
+
+	return sum / float64(len(numbers))
 }

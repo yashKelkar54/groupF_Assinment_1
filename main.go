@@ -62,7 +62,7 @@ func calcAv() {
 
 	// Oweipadei Joshua Bayefa: Function
 	numbers := []float64{1.0, 2.0, 3.0, 4.0, 5.0}
-	avg := CalculateAverage(numbers)
+	avg := calculateAverage(numbers)
 	fmt.Printf("Average: %.2f\n", avg)
 
 	var num float32 = 7.6

@@ -2,7 +2,43 @@ package main
 
 import "fmt"
 
-func max(num1, num2 int) int {
+main() {
+	(CalculateAverage())
+	(calcAv())
+	(cube())
+	(fibseq())
+	(even())
+	(max())
+}
+
+// yash function // 500223746
+func fibseq() {
+    for i := 0; i < 10; i++ {
+        fmt.Println(fibonaciseq(i), " ")
+    }
+}
+
+func fibonaciseq(n int) int {
+    if n <= 1 {
+        return n
+    }
+    return fibonaciseq(n-1) + fibonaciseq(n-2)
+}
+
+// aarti function 500224115
+func even() {
+
+    var num int = 8
+
+    if num%2 == 0 {
+        fmt.Println(num, "is even.")
+    } else {
+        fmt.Println(num, "is not even.")
+    }
+}
+ 
+// hardik function
+func max() (num1, num2 int) int {
 	/* local variable declaration */
 	var result int
 
@@ -14,7 +50,7 @@ func max(num1, num2 int) int {
 	return result
 }
 
-func main() {
+func calcAv() {
 	var a int = 100
 	var b int = 200
 	var ret int
@@ -49,7 +85,7 @@ func CalculateAverage(numbers []float64) float64 {
 
 	return sum / float64(len(numbers))
 }
-
+ // karan code
 func cube(x float64) float64 {
 	return x * x * x
 }

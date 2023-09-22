@@ -9,6 +9,8 @@ main() {
 	(fibseq())
 	(even())
 	(max())
+	(sum())
+	(sum2())
 }
 
 // yash function // 500223746
@@ -90,6 +92,18 @@ func cube(x float64) float64 {
 	return x * x * x
 }
 
+// sumit code
 func add(a, b int) int {
 	return a + b
+}
+
+// Sukhneet function 500224802
+func sum(num1, num2 int) int {
+	return num1 + num2
+}
+
+func sum2() {
+	result := sum(9, 1)
+
+	fmt.Println(result)
 }

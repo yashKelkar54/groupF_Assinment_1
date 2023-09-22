@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 main() {
-	(CalculateAverage())
+	(calculateAverage())
 	(calcAv())
 	(cube())
 	(fibseq())
@@ -74,7 +74,7 @@ func calcAv() {
 	fmt.Printf("3 + 5 = %d\n", result)
 }
 
-func CalculateAverage(numbers []float64) float64 {
+func calculateAverage(numbers []float64) float64 {
 	// Avoid division by zero for empty slices
 	if len(numbers) == 0 {
 		return 0.0

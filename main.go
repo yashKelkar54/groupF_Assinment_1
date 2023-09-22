@@ -28,7 +28,7 @@ func fibonaciseq(n int) int {
 }
 
 // aarti function 500224115
-func even() {
+func iseven() {
 
     var num int = 8
 

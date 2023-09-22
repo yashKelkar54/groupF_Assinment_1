@@ -7,10 +7,11 @@ main() {
 	(calcAv())
 	(cube())
 	(fibseq())
-	(even())
+	(iseven())
 	(max())
 	(sum())
 	(sum2())
+	(convertToFeetAndPounds())
 }
 
 // yash function // 500223746
@@ -106,4 +107,52 @@ func sum2() {
 	result := sum(9, 1)
 
 	fmt.Println(result)
+}
+
+//DENNIS-SAMUEL ANUMBA
+ /*This program recieves the height and weight of a person in meters and kilogram, then i created a method
+that converts the height and weight input to FEET and POUNDS 
+1)The user enters his/her height(in meters) and body weight(in kilogram).
+2)The funtion converts the height and weight to Feet and Pound respectively.
+3)The function displays the converted units.
+*/
+
+func convertToFeetAndPounds(meters float64, kilograms float64) (float64, float64) {
+//Conversion rate used
+	metersToFeet := 3.28084
+	kilogramsToPounds := 2.20462
+
+//HEIGHT IN FEET CONVERSION
+	feet := meters * metersToFeet
+
+//WEIGHT IN POUNDS CONVERSION
+	pounds := kilograms * kilogramsToPounds
+
+	return feet, pounds
+}
+
+func convertheightweight() {
+	var meters, kilograms float64
+
+//REQUESTING USER HEIGHT INPUT
+	fmt.Print("Enter your height in meters: ")
+	_, err := fmt.Scan(&meters)
+	if err != nil {
+		fmt.Println("Invalid input. Please enter a valid numeric value for height.")
+		return
+	}
+//REQUESTING USER WEIGHT INPUT
+	fmt.Print("Enter your weight in kilograms: ")
+	_, err = fmt.Scan(&kilograms)
+	if err != nil {
+		fmt.Println("Invalid input. Please enter a valid numeric value for weight.")
+		return
+	}
+
+//COVERTING TO FEET AND POUNDS
+	feet, pounds := convertToFeetAndPounds(meters, kilograms)
+
+//DISPLAYING CONVERTED VALUES
+	fmt.Printf("Your height in feet: %.2f\n", feet)
+	fmt.Printf("Your weight in pounds: %.2f\n", pounds)
 }

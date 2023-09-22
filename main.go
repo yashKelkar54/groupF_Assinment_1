@@ -28,6 +28,11 @@ func main() {
 	numbers := []float64{1.0, 2.0, 3.0, 4.0, 5.0}
 	avg := CalculateAverage(numbers)
 	fmt.Printf("Average: %.2f\n", avg)
+
+	var num float32 = 7.6
+	cubee := cube(num)
+	fmt.Printf("Cube: %.2f\n", cubee)
+
 }
 
 func CalculateAverage(numbers []float64) float64 {
@@ -42,4 +47,8 @@ func CalculateAverage(numbers []float64) float64 {
 	}
 
 	return sum / float64(len(numbers))
+}
+
+func cube(x float64) float64 {
+	return x * x * x
 }
